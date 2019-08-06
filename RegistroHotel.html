@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Hotel</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+
+    </nav>
+</head>
+<body>
+
+<div class="container">
+    <h1>Registro Hotel</h1>
+    <form class="container" id="needs-validation" novalidate>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom01">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" value="" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom02">Apellidos</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Apellidos" value="" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom03">Tipo Cuarto/Suite</label>
+                <select class="form-control" id="validationCustom03" name="tipoCuarto/suite" required>
+                    <option value="0"> Seleccionar </option>
+                    <option value="1"> Standard </option>
+                    <option value="2"> Deluxe </option>
+                    <option value="3"> Superior Deluxe </option>
+                    <option value="4"> Premier Deluxe  </option>
+                    <option value="5"> Executive Suite </option>
+                    <option value="6"> Junior Suite </option>
+                    <option value="7"> Honeymoon Suite </option>
+                </select>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom04">Numero de Cuartos/Suites</label>
+                <select class="form-control" id="validationCustom04" name="numerodeCuartos/suites" required>
+                    <option value="0"> Seleccionar </option>
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="4"> 4 </option>
+                    <option value="5"> 5 </option>
+                    <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                </select>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom05">Numero de Personas</label>
+                <select class="form-control" id="validationCustom05" name="numeroPersonas" required>
+                    <option value="0"> Seleccionar </option>
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="4"> 4 </option>
+                    <option value="5"> 5 </option>
+                    <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                </select>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom06">Restaurante</label>
+                <select class="form-control" id="validationCustom06" required>
+                    <option value="0" selected> ¿Reservar Restaurante? </option>
+                    <option value="1"> Si </option>
+                    <option value="2"> No </option>
+                </select>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom07">Fecha Ingreso</label>
+                <input type="date" class="form-control" id="validationCustom07" name="fechaIngreso" required>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom08">Fecha Salida</label>
+                <input type="date" class="form-control" id="validationCustom08" name="fechaSalida" required>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit" id="btnvalidar" value="Validar">Registrar</button>
+    </form>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="js/bootstrap.min.js"></script>
+    <script src="js/validacion.js"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+
+            window.addEventListener('load', function() {
+                var form = document.getElementById('needs-validation');
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
+</div>
+</body>
+</body>
+</html>

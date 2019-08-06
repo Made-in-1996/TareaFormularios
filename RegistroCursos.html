@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Cursos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+
+    </nav>
+</head>
+<body>
+
+<div class="container">
+    <h1>Registro Cursos</h1>
+    <form class="container" id="needs-validation" novalidate>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom01">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" value="" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom02">Apellidos</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Apellidos" value="" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom03">Email</label>
+                <input type="email" class="form-control" id="validationCustom03" placeholder="Email" required>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom04">Direccion</label>
+                <input type="text" class="form-control" id="validationCustom04" placeholder="Direccion" required>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom05">Fecha Nacimiento</label>
+                <input type="date" class="form-control" id="validationCustom05" placeholder="Fecha Nacimiento" required>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom06">Departamento</label>
+                <select class="form-control" id="validationCustom06">
+                    <option value="Alta Verapaz">Alta Verapaz</option>
+                    <option value="Baja Verapaz">Baja Verapaz</option>
+                    <option value="Chimaltenango">Chimaltenango</option>
+                    <option value="Chiquimula">Chiquimula</option>
+                    <option value="El Progreso">El Progreso</option>
+                    <option value="Escuintla">Escuintla</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Huehuetenango">Huehuetenango</option>
+                    <option value="Izabal">Izabal</option>
+                    <option value="Jalapa">Jalapa</option>
+                    <option value="Jutiapa">Jutiapa</option>
+                    <option value="Petén">	Petén</option>
+                    <option value="Quetzaltenango">Quetzaltenango</option>
+                    <option value="Quiché">Quiché</option>
+                    <option value="Retalhuleu">	Retalhuleu</option>
+                    <option value="Sacatepéquez">Sacatepéquez</option>
+                    <option value="San Marcos">San Marcos</option>
+                    <option value="anta Rosa">Santa Rosa</option>
+                    <option value="Sololá">Sololá</option>
+                    <option value="Suchitepéquez">Suchitepéquez</option>
+                    <option value="Totonicapán">Totonicapán</option>
+                    <option value="Zacapa">Zacapa</option>
+                </select>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom08">Telefono</label>
+                <input type="text" class="form-control" id="validationCustom08" placeholder="Telefono" required>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom07">Comentario</label>
+                <textarea rows="1" class="form-control" id="validationCustom07" placeholder="Comentario" required></textarea>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit" id="btnvalidar" value="Validar">Registrar</button>
+    </form>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="js/bootstrap.min.js"></script>
+    <script src="js/validacion.js"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+
+            window.addEventListener('load', function() {
+                var form = document.getElementById('needs-validation');
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
+
+</div>
+</body>
+</html>

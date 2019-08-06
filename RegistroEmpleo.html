@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Empleo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+    </nav>
+</head>
+<body>
+<div class="container">
+    <h1>Registro Empleo</h1>
+    <form class="container" id="needs-validation" novalidate>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom01">Nombre Completo</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre Completo" value="" required>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom02">Telefono</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Telefono" value="" required>
+            </div>
+
+            <div class="col-md-3 mb-3">
+            <label for="validationCustom03">Direccion</label>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="Direccion" value="" required>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom04">Email</label>
+                <input type="email" class="form-control" id="validationCustom04" placeholder="Email" required>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom05">DPI</label>
+                <input type="text" class="form-control" id="validationCustom05" placeholder="DPI" required>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom06">NIT</label>
+                <input type="text" class="form-control" id="validationCustom06" placeholder="NIT" required>
+                <div class="invalid-feedback">
+                    Ingresa datos
+                </div>
+            </div>
+
+            <h1>Datos de Empleo</h1>
+            <form class="container" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom07">Puesto que desea Aplicar</label>
+                        <select class="form-control" id="validationCustom07" name="puestoAplicar" value="" required>
+                            <option>Seleccionar</option>
+                            <option>Arquitecto</option>
+                            <option>Digitador</option>
+                            <option>Ingeniero</option>
+                            <option>Gerente</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Ingresa datos
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom08">Años de Experiencia</label>
+                        <select type="text" class="form-control" id="validationCustom08" value="" required>
+                        <option>Seleccionar</option>
+                        <option>01-05</option>
+                        <option>10-15</option>
+                        <option>20-25</option>
+                        <option>Ninguno</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Ingresa datos
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom09">Pretencion Salarial</label>
+                        <input type="text" class="form-control" id="validationCustom09" placeholder="Pretencion Salarial" value="" required>
+                        <div class="invalid-feedback">
+                            Ingresa datos
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button class="btn btn-primary" type="submit" id="btnvalidar" value="Validar">Registrar</button>
+    </form>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="js/bootstrap.min.js"></script>
+    <script src="js/validacion.js"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+
+            window.addEventListener('load', function() {
+                var form = document.getElementById('needs-validation');
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
+
+</div>
+</body>
+</html>
